@@ -16,7 +16,9 @@ The naming convention for python variables uses lowercase separated by underscor
 ## Data Types
 - Primitive Types: Primitive types are String, Integer, Float and Boolean. Indexing of strings is known as `subscripting`.
 
-## Math Operations
+## Python Operators
 Mathematical operations are basically the same as in JS. 
 - A unique operator is the floor division operator `//` which gives the quotient of a division operation. E.g. `4.5 // 2` returns 4 as the quotient.
 - f-Strings provide the same functionality as string literals in Javascript. A string can contain variables by simply prepending an f to the string.
+- Comparism operators are also the same. if-else statements use almost the same syntax.
+- Spacing and indentation have their significance in Python. Indented code below a statement signifies that the block of code is a child of that statement.
