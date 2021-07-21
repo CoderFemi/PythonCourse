@@ -20,12 +20,16 @@ The naming convention for python variables uses lowercase separated by underscor
 ## Python Operators
 - Mathematical operations are basically the same as in JS. A unique operator is the floor division operator `//` which gives the quotient of a division operation. E.g. `4.5 // 2` returns 4 as the quotient.
 - f-Strings provide the same functionality as string literals in Javascript. A string can contain variables by simply prepending an f to the string.
-- Comparism operators are also the same. if-else statements use almost the same syntax.
+- Comparism operators are also the same. `if-else` statements use almost the same syntax. `if-in` statements are used to check for items in a list or string (JS includes() equivalent).
 - Logical operators are `and`, `or` and `not`.
 - Spacing and indentation have their significance in Python. Indented code below a statement signifies that the block of code is a child of that statement.
 
 ## Loops
 The while loop and the for-in loop are the two loops used in python. The range() function is used together with the for-in loop to specify iteration limits.
+
+## Functions
+Functions are defined in Python with the keyword `def`, a function name, a pair of parentheses followed by a colon. The code to be executed by the function is indented on subsequent lines as a code block.
+Python improves on `positional arguments` available in JS. It also has `keyword arguments`. When calling a function, arguments can be assigned values, in any order that is desired.
 
 ## Modules
 Python has built-in modules which are imported with the `import` keyword. An example is the random module. It has the `randint(int1, int2)` method which generates a random integer between two numbers. Also the `random()` method which generates a float between 0 and 1. random.shuffle() shuffles items in a list, and random.choice() randomly selects an item from a list or string.
