@@ -42,6 +42,9 @@ Custom modules are defined by importing user-defined files in the same manner.
 
 ## Data Structures
 * Lists: These are the equivalent of JS arrays. An item's index is also called an `offset`. A positive index accesses items from the beginning of the list. A negative index accesses items from the end of the list. A lot of methods are available for manipulating list items.
+* Tuples: These are similar to lists, but are immutable. They are more efficient for time and space complexity.
 
 ## OOP
 OOP provides a lot of improvement over Procedural Programming. Real-life objects are modelled using Classes. In python, classes are named with `PascalCase`, properties are called `attributes`, and methods are the same name, `methods`. To create a new instance of a class, the class is simply called i.e. `new_car = Car()`.
+The equivalent of the JS `this` keyword in Python is `self`. The class constructor is defined with a name of `__init__()` taking 'self' as the first argument, followed by other required attributes.
+Class methods also have to be defined with a 'self' argument, to always refer to the instance that is calling the method.
