@@ -35,6 +35,8 @@ The while loop and the for-in loop are the two loops used in python. The range()
 Functions are defined in Python with the keyword `def`, a function name, a pair of parentheses followed by a colon. The code to be executed by the function is indented on subsequent lines as a code block.
 Python improves on `positional arguments` available in JS. It also has `keyword arguments`. When calling a function, arguments can be assigned values, in any order that is desired.
 A function with no return statement returns the value `None` (just like Javascript returns `undefined`.).
+* Unlimited Positional Arguments: An unlimited number of arguments can be passed into a function using an asterisk followed by a variable, which is usually args `*args`. When the function is called with arguments, they are outputted in a tuple.
+* Unlimited Keyword Arguments: To pass in unlimited keyword arguments, a double asterisk is used as the function parameter followed by a variable, usually denoted as kwargs (short for keyword arguments) `**kwargs`. The arguments are outputted in a dictionary. When kwargs are being assigned to class attributes, it is best to use a get() method to access kwargs dictionary values instead of indexing or the dot notation. Because the latter two will raise an error when a passed-in argument does not exist, but using a getter will simply return `None`.
 
 ## Modules
 Python has built-in modules which are imported with the `import` keyword. An example is the random module. It has the `randint(int1, int2)` method which generates a random integer between two numbers. Also the `random()` method which generates a float between 0 and 1. random.shuffle() shuffles items in a list, and random.choice() randomly selects an item from a list or string.
@@ -43,6 +45,9 @@ Custom modules are defined by importing user-defined files in the same manner.
 ## Data Structures
 * Lists: These are the equivalent of JS arrays. An item's index is also called an `offset`. A positive index accesses items from the beginning of the list. A negative index accesses items from the end of the list. A lot of methods are available for manipulating list items. Slicing is done by simply indexing with a start and end index separated by a colon. A third index argument specifies the increment value for slicing.
 * Tuples: These are similar to lists, but are immutable. They are more efficient for time and space complexity. Tuples are sliced the same way as lists.
+* Dictionaries are same as in JS, but more flexible in that keys can be any immutable, primitive data type such as a string, integer, boolean. Mutable types such as lists and dictionaries cannot be keys.
+  * Sequences are any iterable, ordered data type. This could be a string, list, range or tuple.
+* The equivalent of mapping in JS is done with `list comprehensions`. To conditionally create mapped values from another list, the syntax is `new_list = [<new_value> for <value> in list if <condition>]`. This works not only with lists but also with other data types such as strings, dictionaries, tuples. The syntax for dictionaries is `new_dict = [<new_key>:<new_value> for (key, value) in dict.items() if <condition>]` It is modified to return only keys or values depending on the operation desired.
 
 ## OOP
 OOP provides a lot of improvement over Procedural Programming. Real-life objects are modelled using Classes. In python, classes are named with `PascalCase`, properties are called `attributes`, and methods are the same name, `methods`. To create a new instance of a class, the class is simply called i.e. `new_car = Car()`.
