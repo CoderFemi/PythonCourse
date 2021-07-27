@@ -57,4 +57,20 @@ The values of an instance's attributes are called it's `state`.
 Class inheritance in Python is done by passing the parent class (super class) as an argument to the child class and in the constructor function, calling `super().__init__()`. Calling the super function is recommended but not strictly required.
 
 ## File System
-the `open()` method is used to access system files. It takes the file name as the first argument, and the mode as the second, which can be set to either readonly - r or write - w. If the specified file doesn't exist a new one is created. `read()` reads from the file. `write()` writes to the file. This normally overwrites what is already in the file. To append to the file instead, `\n` a new line is specified at the beginning of the string. `close()` closes the file. A simpler way to access the file is by using the `with open('<filepath>'') as <new_file_name>` statement to open the file. Then there is no need to call the `close()` method.
+the `open()` method is used to access system files. It takes the file name as the first argument, and the mode as the second, which can be set to either readonly mode - 'r', write mode - 'w' or append mode 'a'. If the specified file doesn't exist a new one is created. `read()` reads from the file. `write()` writes to the file. This normally overwrites what is already in the file. To append to the file instead, `\n` a new line is specified at the beginning of the string. `close()` closes the file. A simpler way to access the file is by using the `with open('<filepath>', <mode>) as <new_file_name>` statement to open the file. Then there is no need to call the `close()` method.
+JSON strings are also available in Python by importing the in-built json module. `json.dump(<dict_data>, <file_path.json>, <indent>)` is used to write to a json file. `json.load(<file_path.json)` reads the json file. `json_data.update(<new_data>)` updates the json data.
+
+## Error Handling
+The syntax for error handling in Python is as below:
+```
+try:
+    <statement>
+except <ErrorType>: # Multiple except clauses are possible.
+    <do something>
+else:
+    <do something if no error>
+finally:
+    <do something no matter what happens>
+```
+Throwing an error is done with the `raise` keyword followed by the <ErrorType> or a more general `Exception`.
+Golden Nugget: **Only use exception handling when an if-else statement does not suffice**.
