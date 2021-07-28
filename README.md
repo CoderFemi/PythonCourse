@@ -74,3 +74,6 @@ finally:
 ```
 Throwing an error is done with the `raise` keyword followed by the <ErrorType> or a more general `Exception`.
 Golden Nugget: **Only use exception handling when an if-else statement does not suffice**.
+
+## HTTP REQUESTS
+Python uses the built-in requests library for handling HTTP requests. It follows the same pattern with other popular JS tools as well. A useful way to catch errors from unsuccessful requests is to use the `response.raise_for_status` method which will catch all errors that do not have a status code in the range 200.
