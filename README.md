@@ -36,11 +36,13 @@ Functions are defined in Python with the keyword `def`, a function name, a pair 
 Python improves on `positional arguments` available in JS. It also has `keyword arguments`. When calling a function, arguments can be assigned values, in any order that is desired.
 A function with no return statement returns the value `None` (just like Javascript returns `undefined`.).
 * Unlimited Positional Arguments: An unlimited number of arguments can be passed into a function using an asterisk followed by a variable, which is usually args `*args`. When the function is called with arguments, they are outputted in a tuple.
-* Unlimited Keyword Arguments: To pass in unlimited keyword arguments, a double asterisk is used as the function parameter followed by a variable, usually denoted as kwargs (short for keyword arguments) `**kwargs`. The arguments are outputted in a dictionary. When kwargs are being assigned to class attributes, it is best to use a get() method to access kwargs dictionary values instead of indexing or the dot notation. Because the latter two will raise an error when a passed-in argument does not exist, but using a getter will simply return `None`.
+* Unlimited Keyword Arguments: To pass in unlimited keyword arguments, a double asterisk is used as the function parameter followed by a variable, usually denoted as kwargs (short for keyword arguments) `**kwargs`. The arguments are outputted in a dictionary. When kwargs are being assigned to class att ributes, it is best to use a get() method to access kwargs dictionary values instead of indexing or the dot notation. Because the latter two will raise an error when a passed-in argument does not exist, but using a getter will simply return `None`.
+* Python Decorators: Python decorators are basically factory functions that take in another function as an argument, carry out some specified operations within a wrapper function , call the passed-in function and then return the wrapper function. Instead of passing in the function as an argument and then calling the result, syntactic sugar is used before the function definition i.e. `@decorator_function`.
 
 ## Modules
 Python has built-in modules which are imported with the `import` keyword. An example is the random module. It has the `randint(int1, int2)` method which generates a random integer between two numbers. Also the `random()` method which generates a float between 0 and 1. random.shuffle() shuffles items in a list, and random.choice() randomly selects an item from a list or string.
 Custom modules are defined by importing user-defined files in the same manner.
+Python uses the `__name__` variable to store module names. If the module is currently being executed on the command line, it's name variable is set to the string '__main__'. If it is imported into another module, on the other hand, the name variable name is set to the module name instead. We can therefore conditionally run some code only `if __name__ == '__main__`, so that the code doesn't run if the module is being used in another module.
 
 ## Data Structures
 * Lists: These are the equivalent of JS arrays. An item's index is also called an `offset`. A positive index accesses items from the beginning of the list. A negative index accesses items from the end of the list. A lot of methods are available for manipulating list items. Slicing is done by simply indexing with a start and end index separated by a colon. A third index argument specifies the increment value for slicing.
@@ -77,3 +79,6 @@ Golden Nugget: **Only use exception handling when an if-else statement does not 
 
 ## HTTP REQUESTS
 Python uses the built-in requests library for handling HTTP requests. It follows the same pattern with other popular JS tools as well. A useful way to catch errors from unsuccessful requests is to use the `response.raise_for_status` method which will catch all errors that do not have a status code in the range 200.
+
+## TIPS
+* To edit html directly in the browser, in the browser console, execute `document.body.contentEditable=true`
